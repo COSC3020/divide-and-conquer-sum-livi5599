@@ -1,5 +1,5 @@
 function divideAndConquerSum(a, start, end) {
-    if (start == end) {
+    if (a.length == 0) {
         return 0;
     }
 
