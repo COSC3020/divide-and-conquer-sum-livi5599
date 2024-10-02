@@ -7,7 +7,7 @@ function divideAndConquerSum(a, start, end) {
         return a[start];
     }
 
-    if (end - start == 1) {
+    if (a.length == 2) {
         return a[start] + a[end];
     } 
 
