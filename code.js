@@ -1,4 +1,4 @@
-function DC(a, start, end) {
+function divideAndConquerSum(a, start, end) {
     if (start == end) {
         return a[start];
     }
@@ -15,9 +15,9 @@ function DC(a, start, end) {
         mid2 = end;
     }
     
-    var left = DC(a, start, mid1 - 1);
-    var middle = DC(a, mid1, mid2 -1);
-    var right = DC(a, mid2, end);
+    var left = divideAndConquerSum(a, start, mid1 - 1);
+    var middle = divideAndConquerSum(a, mid1, mid2 -1);
+    var right = divideAndConquerSum(a, mid2, end);
 
     return left + middle + right;
 }
