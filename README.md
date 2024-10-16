@@ -26,9 +26,9 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-Recurrence relation: T(n) = 3T(n/3) + O(1)
+Recurrence relation: T(n) = 3T(n/3) + 1
 To solve it, I used the substitution method.
-After the process, I determined that the general case is 3^i*T(n/3i) + O(3^(i+1)), and that i = log3(n).
+After the process, I determined that the general case is 3^i*T(n/3^i) + (3^(i+1)-1)/2, and that i = log3(n).
 After further simplification, I determined that the runtime of the algorithm is O(n).
 
 I recieved help from Ali and ChatGPT.  Ali told me that I needed to use substitution rather than the Master Theorem, and ChatGPT helped me determine the general case since I was unable to notice that the pattern included a geometric series.
