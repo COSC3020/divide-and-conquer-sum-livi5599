@@ -26,7 +26,8 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-Recurrence relation: T(n) = 3T(n/3) + 1
+Recurrence relation: T(n) = 3T(n/3) + 3n + 1
+I got this recurrence relation because there are a total of 7 operations performed to partition the array and combine the results: 3 recursive operations, 3 slice operations, and one operation to combine the results.
 To solve it, I used the substitution method.
 After the process, I determined that the general case is 3^i*T(n/3^i) + (3^(i+1)-1)/2, and that i = log3(n).
 After further simplification, I determined that the runtime of the algorithm is O(n).
